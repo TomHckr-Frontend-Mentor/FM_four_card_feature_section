@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    box-sizing: border-box;
+    /* site-colors */
+    --dark-blue: hsl(234, 12%, 34%);
+    --gray-blue: hsl(229, 6%, 66%);
+    --light-gray: hsl(0, 0%, 98%);
+    /* accent card colors */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --blue: hsl(212, 86%, 64%);
+    --orange: hsl(34, 97%, 64%);
+
+}
+
+body {
+        background: var(--light-gray);
+}
+
+main {
+    margin: 50px 3vh 0 3vh;
+}
+
+p {
+    color: var(--gray-blue);
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+h1, h2 {
+    color: var(--dark-blue);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+#title {
+    text-align: center;
+}
+
+#title .light {
+    font-weight: 200;
+    display: block;
+}
+
+#title-desc {
+    display: block;
+    text-align: center;
+    margin: 23px auto;
+    max-width: 450px;
+}
+
+#cards {
+    padding: 0 7vw;
+    margin-top: 3vh;
+    display: grid;
+}
+
+.card:nth-child(1), 
+.card:nth-child(3) {
+    grid-row: span 2;
+}
+
+.card {
+    box-shadow: 0 20px 30px -15px hsl(215, 49%, 82%);
+    border-radius: 8px;
+    margin: 5%;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 825px) {
+    #cards {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 825px) {
+    #cards {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.card-title {
+    color: var(--dark-blue);
+    font-size: 1.1rem;
+}
+
+.card-desc {
+    font-size: 0.8rem;
+}
+
+.card::before {
+    position: relative;
+    display: block;
+    content: "";
+    height: 4px;
+    width: 100%;
+}
+
+.card:nth-child(1)::before {
+    background-color: var(--cyan);
+}
+
+.card:nth-child(2)::before {
+    background-color: var(--red);
+}
+
+.card:nth-child(3)::before {
+    background-color: var(--blue);
+}
+
+.card:nth-child(4)::before {
+    background-color: var(--orange);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.icon {
+    position: relative;
+    margin-top: 40px;
+    float: right;
+    padding-bottom: inherit;
+}
+
+.attribution {
+    width: 100%;
+}
+
+footer {
+    margin-top: 10px;
+}
