@@ -55,6 +55,8 @@ h1, h2 {
     padding: 0 7vw;
     margin-top: 3vh;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .card:nth-child(1), 
